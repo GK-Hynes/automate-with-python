@@ -20,6 +20,10 @@ while not url.endswith('#'):
     else:
         comic_url = 'https:' + comic_element[0].get('src')
 
+        # Handle certain images
+        if not comic_url.startswith('https://imgs.xkcd.com'):
+            comic_url = 'https://xkcd.com' + comic_element[0].get('src')
+        
         # Download the image
         print('Downloading image %s...' % (comic_url))
         res = requests.get(comic_url)
