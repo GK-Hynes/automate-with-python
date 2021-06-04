@@ -8,8 +8,7 @@ wb = openpyxl.load_workbook('censuspopdata.xlsx')
 sheet = wb['Population by Census Tract']
 county_data = {}
 
-# TODO: Fill in county_data with each county's population and tracts.
-
+# Fill in county_data with each county's population and tracts.
 print('Reading rows...')
 for row in range(2, sheet.max_row + 1):
     # Each row in the spreadsheet has data from one census tract
