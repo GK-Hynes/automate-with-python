@@ -14,7 +14,7 @@ if len(sys.argv) < 2:
 location = ''.join(sys.argv[1:])
 
 # Download the JSON data from OpenWeatherMap.org's API
-url = f'https://api.openweathermap.org/data/2.5/forecast/daily?q={location}s&cnt=3&APPID={APPID}'
+url = f'https://api.openweathermap.org/data/2.5/forecast?q={location}&cnt=3&appid={APPID}'
 response = requests.get(url)
 response.raise_for_status()
 # Uncomment to see the raw JSON
