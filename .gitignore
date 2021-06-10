@@ -138,4 +138,5 @@ dmypy.json
 cython_debug/
 
 # Google API credentials
+credentials.json
 credentials-sheets.json
